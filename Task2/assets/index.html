@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TODO LIST</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+
+  <main>
+    <div class="todo">
+
+      <div class="todo_header">
+        <div class="todo_header_top">
+          <a href="#" class="todo-clear">
+            <i class="material-icons">loop</i>
+          </a>
+        </div>
+        <div class="todo_header_bottom">
+          <div class="todo-date" id="date">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="todo_content">
+        <ul class="todo_list" id="list">
+        </ul>
+      </div>
+
+      <div class="todo_add">
+        <a href="#" id="toDoAddBtn">
+          <i class="material-icons">add_circle_outline</i>
+        </a>
+        <input type="text" name="addToDo" class="todo_add-inp" id="input" placeholder="Add a to-do">
+      </div>
+
+    </div>
+  </main>
+
+<script src="js/index.js"></script>
+<script src="js/materialize.min.js"></script>
+</body>
+</html>

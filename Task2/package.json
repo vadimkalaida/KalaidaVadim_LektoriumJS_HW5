@@ -1,0 +1,21 @@
+{
+  "name": "mygulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "VadimKalaida",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "@material/button": "^4.0.0",
+    "@material/textfield": "^4.0.0",
+    "browser-sync": "^2.26.7",
+    "materialize-css": "^1.0.0-rc.2"
+  }
+}
