@@ -8,6 +8,7 @@ let clear = document.querySelector('.todo-clear'),
   lineThrough = 'line-through',
   infoItem,
   myId,
+  selectedItems = [],
   myOptions = {weekday : 'long', month : 'short', day : 'numeric'},
   today = new Date();
 
@@ -86,6 +87,14 @@ toDoAddBtn.addEventListener('click', function () {
   input.value = '';
 });
 
+Array.prototype.remove = function(value) {
+  let idx = this.indexOf(value);
+  if (idx != -1) {
+    return this.splice(idx, 1);
+  }
+  return false;
+};
+
 //complete to-do item function
 function completeToDo(element) {
   element.classList.toggle(myChecked);
@@ -94,8 +103,10 @@ function completeToDo(element) {
 
   if(infoItem[element.id].done) {
     infoItem[element.id].done = false;
+    selectedItems.remove(element);
   } else {
     infoItem[element.id].done = true;
+    selectedItems.push(element);
   }
 }
 
