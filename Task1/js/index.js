@@ -15,7 +15,7 @@ if(myData) {
 
 wordsListParagraph.innerHTML = '[' + 'WORDS: ' + wordsList + ']';
 
-addWordBtn.addEventListener('click', function() {
+let addWordFunc = function() {
   let myWord = addWordInput.value.toLowerCase(),
     myWordEmpty = addWordInput.value = '';
   if(myWord) {
@@ -34,6 +34,14 @@ addWordBtn.addEventListener('click', function() {
   }
   myWordEmpty;
   wordsListParagraph.innerHTML = '[' + 'WORDS: ' + wordsList + ']';
+};
+
+addWordBtn.addEventListener('click', addWordFunc);
+
+addWordInput.addEventListener('keyup', function(event) {
+  if(event.keyCode === 13) {
+    addWordFunc();
+  }
 });
 
 clear.addEventListener('click', function() {
@@ -42,11 +50,22 @@ clear.addEventListener('click', function() {
   location.reload();
 });
 
-searchInput.addEventListener('keyup', function () {
+
+
+setInterval(function() {
   let searchWord = searchInput.value.toLowerCase();
   if(searchWord) {
     wordStatus.innerHTML = wordsList.some(item => item === searchWord);
   } else {
     wordStatus.innerHTML = '';
   }
-});
+}, 500);
+
+// searchInput.addEventListener('keyup', function () {
+//   let searchWord = searchInput.value.toLowerCase();
+//   if(searchWord) {
+//     wordStatus.innerHTML = wordsList.some(item => item === searchWord);
+//   } else {
+//     wordStatus.innerHTML = '';
+//   }
+// });

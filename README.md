@@ -1,6 +1,6 @@
-KalaidaVadim_LektoriumJS_HW5 - NOT READY
+KalaidaVadim_LektoriumJS_HW5 - READY
 -
-- Task 1 - Not Ready
+- Task 1 - Ready
 - Task 2 - Ready
     - gulp-sass
     - browser-sync
